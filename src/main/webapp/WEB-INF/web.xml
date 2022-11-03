@@ -1,6 +1,6 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee"
@@ -15,10 +15,6 @@
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
-
-<!--  <welcome-file-list>-->
-<!--    <welcome-file>WEB-INF/views/TKRootView</welcome-file>-->
-<!--  </welcome-file-list>-->
 
   <context-param>
     <param-name>contextConfigLocation</param-name>

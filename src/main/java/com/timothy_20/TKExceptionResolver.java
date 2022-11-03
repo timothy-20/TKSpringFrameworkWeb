@@ -11,7 +11,7 @@ public class TKExceptionResolver extends AbstractHandlerExceptionResolver {
     @Override
     protected ModelAndView doResolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("TKErrorView");
+        modelAndView.setViewName("error/TKErrorView");
         modelAndView.addObject("errorClass", ex.getClass().getSimpleName());
         modelAndView.addObject("errorCause", ex.getCause());
         modelAndView.addObject("errorMessage", ex.getMessage());

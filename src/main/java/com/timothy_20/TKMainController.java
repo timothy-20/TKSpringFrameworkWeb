@@ -3,7 +3,6 @@ package com.timothy_20;
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
 
-import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,13 +17,8 @@ public class TKMainController {
     private static final Logger _LOG = LoggerFactory.getLogger(TKMainController.class);
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(Local local, Model model) {
-        return "TKRootView";
-    }
-
-    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Locale locale, Model model) {
-        _LOG.debug("Welcome main, This client locale is " + locale);
+        _LOG.warn("Welcome root page, This client locale is " + locale);
 
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
