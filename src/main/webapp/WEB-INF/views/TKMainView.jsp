@@ -10,72 +10,26 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <html>
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><tiles:getAsString name="title" /></title>
-    <style>
-        * {
-            margin: auto 0;
-        }
-
-        body {
-            background-color: gray;
-        }
-
-        div {
-            display: block;
-        }
-
-        #container {
-            box-sizing: border-box;
-            position: relative;
-        }
-
-        #main_header {
-            top: 0;
-            width: 100%;
-            height: 10%;
-            min-height: 70px;
-            background-color: dimgray;
-        }
-
-        #main_wrapper {
-            margin: 10px 5px;
-            width: 100%;
-            background-color: black;
-        }
-
-        /*#main_side_menu {*/
-        /*    width: 20%;*/
-        /*    min-width: 100px;*/
-        /*    height: auto;*/
-        /*    background-color: red;*/
-        /*    !*background-color: lightgray;*!*/
-        /*}*/
-
-        /*#main_content {*/
-        /*    */
-        /*}*/
-
-        #main_footer {
-
-        }
-    </style>
+    <link href="<c:url value="/resources/style/TKMainView.css" />" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-<div id="container">
-    <div id="main_header">
-        <tiles:insertAttribute name="mainHeader" />
+<div id="root">
+    <header class="header-content">
+        <div class="main-header"><tiles:insertAttribute name="mainHeader" /></div>
+    </header>
+
+    <div class="main-wrapper">
+        <div class="main-side-menu"><tiles:insertAttribute name="mainMenu" /></div>
+        <div class="main-content"><tiles:insertAttribute name="mainContent" /></div>
     </div>
-    <div id="main_wrapper">
-        <div id="main_side_menu">
-            <tiles:insertAttribute name="mainMenu" />
-        </div>
-        <div id="main_content">
-            <tiles:insertAttribute name="mainContent" />
-        </div>
-    </div>
-    <div id="main_footer">
-        <tiles:insertAttribute name="mainFooter" />
-    </div>
+
+    <footer class="footer-content">
+        <div class="main-footer"><tiles:insertAttribute name="mainFooter" /></div>
+    </footer>
 </div>
 </body>
 </html>
